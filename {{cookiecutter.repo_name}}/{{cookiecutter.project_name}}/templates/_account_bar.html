@@ -1,19 +1,17 @@
 {% load i18n %}
 
 {% if user.is_authenticated %}
-	<li class="has-dropdown">
-		<a href="#">{{ user }}</a>
-		<ul class="dropdown">
-			<li><a href="{% url "account_settings" %}"><i class="fi-torso"></i>Account</a></i></li>
-			{% if user.is_staff %}
-			<li><a href="{% url "admin:index" %}"><i class="fi-settings"></i>Admin</a></li>
-			{% endif %}
-			<li><a href="{% url "account_logout" %}"><i class="fi-unlock"></i>Log&nbsp;out</a></li>
-		</ul>
-	</li>
-{% else %}
-		<li><a href="{% url "account_login" %}"><i class="fi-lock"></i>Log In</a></li>
-		{% if ACCOUNT_OPEN_SIGNUP %}
-		<li><a href="{% url "account_signup" %}"><i class="fi-edit"></i>Sign Up</a></li>
-		{% endif %}
+    <li class="has-dropdown">
+    	<a href="#">{{ user }}</a>
+    	<ul class="dropdown">
+    	    {% if user.is_staff %}
+    	    <li><a href="{% url "admin:index" %}"><i class="fi-torso-business"></i>Admin</a></li>
+    	    {% endif %}
+            <li><a href="{% url 'users:detail' request.user.username  %}"><i class="fi-torso">{% trans "My Profile" %}</a></li>
+            <li><a href="{% url 'account_logout' %}"><i class="fi-unlock"></i>{% trans "Logout" %}</a></li>
+        </ul>
+    </li>
+  {% else %}
+    <li><a href="{% url 'account_signup' %}"><i class="fi-edit"></i>{% trans "Sign Up" %}</a></li>
+    <li><a href="{% url 'account_login' %}"><i class="fi-lock"></i>{% trans "Log In" %}</a></li>
 {% endif %}
