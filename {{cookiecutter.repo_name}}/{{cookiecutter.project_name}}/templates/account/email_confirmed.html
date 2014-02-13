@@ -9,11 +9,13 @@
 {% block content %}
 <div class="row">
   <div class="large-6 large-centered columns">
-        <h2>{% trans "Confirm E-mail Address" %}</h2>
+      <div class="panel radius">
+        <h3>{% trans "Confirm E-mail Address" %}</h3>
 
         {% user_display email_address.user as user_display %}
                 
         <p>{% blocktrans with email_address.email as email %}You have confirmed that <a href="mailto:{{email}}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+    </div>
     </div>
   </div>
 {% endblock %}

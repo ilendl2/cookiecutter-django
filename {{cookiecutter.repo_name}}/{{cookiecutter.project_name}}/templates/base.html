@@ -54,9 +54,11 @@
     </div>
     
     <footer>
-        {% block footer %}
-            {% include "_footer.html" %}
-        {% endblock %}
+        <div class="row">
+            {% block footer %}
+                {% include "_footer.html" %}
+            {% endblock %}
+        </div>
     </footer>
     
     {% block javascript %}

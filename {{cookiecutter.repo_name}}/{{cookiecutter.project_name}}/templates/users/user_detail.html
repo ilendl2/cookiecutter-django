@@ -7,17 +7,17 @@
 {% block content %}
     <div class="row">
       <div class="large-6 large-centered columns">
-          <h2>{{ object.username }}</h2>
+          <h3>{{ object.username }}</h3>
+          
+          <h6><strong>First Name:</strong> {{ object.first_name }}</h6>
+          <h6><strong>Last Name:</strong> {{ object.last_name }}</h6>
+          
+          {% if object == request.user %}
+              <div class="row">
+                  <a class="button tiny radius" href="{% url 'users:update' %}">My Info</a>
+                  <a class="button tiny radius" href="{% url 'account_email' %}">E-Mail</a>
+              </div>
+          {% endif %}
       </div>
     </div>
-    
-    {% if object == request.user %}
-    <div class="row">
-      <div class="col-sm-12 ">
-        <a class="button tiny radius" href="{% url 'users:update' %}">My Info</a>
-        <a class="button tiny radius" href="{% url 'account_email' %}">E-Mail</a>
-      </div>
-    </div>
-    {% endif %}
-    
 {% endblock %}
