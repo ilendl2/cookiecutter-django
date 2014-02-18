@@ -9,7 +9,7 @@ Features
 ---------
 
 * For Django 1.6
-* Twitter Bootstrap 3
+* Foundation 5
 * AngularJS
 * Settings management via django-configurations
 * Registration via django-allauth
@@ -39,12 +39,12 @@ First, get cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-django.git
+    $ cookiecutter https://github.com/ilendl2/cookiecutter-django.git
 
 You'll be prompted for some questions, answer them, then it will create a Django project for you.
 
 
-**Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
+**Warning**: After this point, change 'Lendl Smith' etc to your own information.
 
 It prompts you for questions. Answer them::
 
@@ -56,8 +56,8 @@ It prompts you for questions. Answer them::
     Resolving deltas: 100% (283/283), done.
     project_name (default is "project_name")? redditclone
     repo_name (default is "repo_name")? redditclone
-    author_name (default is "Your Name")? Daniel Greenfeld
-    email (default is "Your email")? pydanny@gmail.com
+    author_name (default is "Your Name")? Lendl Smith
+    email (default is "Your email")? lendl.smith@gmail.com
     description (default is "A short description of the project.")? A reddit clone.
     year (default is "Current year")? 2014
     domain_name (default is "Domain name")?
@@ -73,7 +73,7 @@ Create a GitHub repo and push it there::
     $ git init
     $ git add .
     $ git commit -m "first awesome commit"
-    $ git remote add origin git@github.com:pydanny/redditclone.git
+    $ git remote add origin git@github.com:ilendl2/redditclone.git
     $ git push -u origin master
 
 Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?
@@ -128,8 +128,6 @@ Scattered throughout the Python and HTML of this project are places marked with 
 
 Releases
 --------
-
-Want a stable release? You can find them at https://github.com/pydanny/cookiecutter-django/releases
 
 **note**: Cookiecutter won't support tagged releases until 0.7.0 comes out, which should be any day! Which means, if you want to use a
 tagged release of cookiecutter-django, then you have to install Cookiecutter directly from GitHub. To do that, follow these steps:

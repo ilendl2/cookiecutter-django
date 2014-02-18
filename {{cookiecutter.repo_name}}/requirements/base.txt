@@ -29,5 +29,4 @@ psycopg2==2.5.2
 unicode-slugify==0.1.1
 django-autoslug==1.7.2
 
-
 # Your custom requirements go here
